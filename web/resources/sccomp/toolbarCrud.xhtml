@@ -13,9 +13,13 @@
     <cc:implementation>
         <p:toolbar>
             <p:toolbarGroup>
-                <p:commandButton value="Novo" action="#{cc.attrs.crudBean.novo()}" update="@form"></p:commandButton>
-                <p:commandButton value="Salvar" action="#{cc.attrs.crudBean.salvar()}" disabled="#{carroBean.busca == true}" update="@form"></p:commandButton>
-                <p:commandButton value="Buscar" action="#{cc.attrs.crudBean.buscar()}" update="@form"></p:commandButton>
+                <p:commandButton icon="ui-icon-document" value="Novo" action="#{cc.attrs.crudBean.novo()}" update="@form"></p:commandButton>
+                <p:commandButton icon="ui-icon-disk" value="Salvar" action="#{cc.attrs.crudBean.salvar()}" disabled="#{carroBean.busca == true}" update="@form"></p:commandButton>
+                <p:commandButton icon="ui-icon-search" value="Buscar" action="#{cc.attrs.crudBean.buscar()}" update="@form"></p:commandButton>
+            </p:toolbarGroup>
+            
+            <p:toolbarGroup align="right">
+                <cc:insertChildren></cc:insertChildren>
             </p:toolbarGroup>
         </p:toolbar> 
     </cc:implementation>
